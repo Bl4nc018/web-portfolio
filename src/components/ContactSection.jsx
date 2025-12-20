@@ -3,13 +3,13 @@ import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
 
 export const ContactSection = () => {
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
+    const handleSubmit = (e) => {
+        e.preventDefault()
 
-    //     setTimeout(() => {
+        setTimeout(() => {
 
-    //     }, 1500)
-    // }
+        }, 1500)
+    }
 
     return (
         <section id="contact" className="py-24 px-4 bg-secondary/30">
