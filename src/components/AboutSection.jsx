@@ -4,25 +4,26 @@ export const AboutSection = () => {
     return (
         <section id="about" className="py-24 px-4 relative">
             <div className="container mx-auto max-2-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                    About <span className="text-primary"> Me</span>
-                </h2>
+
+                <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center"> Acerca de <span className="text-primary"> mí </span> </h2>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    
                     <div className="space-y-6">
-                        <h3 className="text-2xl font-semibold">Passionate Web Developer & Tech Creator</h3>
-                        <p className="text-muted-foreground">
-                            I'm Ania Blanco, a dedicated web developer with a passion for creating beautiful and functional digital experiences. With a strong foundation in both front-end and back-end technologies, I specialize in building responsive, user-friendly websites and applications that not only look great but also perform seamlessly across all devices.
+                        <h3 className="text-2xl font-semibold text-justify text-glow"> Desarrolladora Full-Stack en constante aprendizaje.</h3>
+                        <p className="text-muted-foreground text-xl text-justify">
+                            Soy Ania, una programadora con interés por construir soluciones sólidas, eficientes y bien estructuradas. Trabajo tanto en el desarrollo front-end como en el back-end, buscando siempre un equilibrio entre diseño, funcionalidad y rendimiento.
                         </p>
-                        <p className="text-muted-foreground">
-                            My journey in web development began several years ago, and since then, I've honed my skills in HTML, CSS, JavaScript, and various frameworks like React and Node.js. I thrive on solving complex problems and continuously learning new technologies to stay ahead in this ever-evolving field.
+                        <p className="text-muted-foreground text-xl text-justify">
+                            Me motiva aprender nuevas tecnologías de forma continua y tener una visión global del desarrollo. Trabajo con lenguajes como Python, Java y SQL, así como HTML y CSS, creando soluciones completas a la par que escalables. Disfruto resolver problemas complejos y aprender constantemente nuevas tecnologías.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+                        <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center text-lg">
                             <a href="#contact" className="cosmic-button">
-                                Get In Touch
+                                Ponte en contacto
                             </a>
-                            <a href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"> 
-                                Download CV
+                            <a href="" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-lg"> 
+                                Descargar CV
                             </a>
                         </div>
                     </div>
