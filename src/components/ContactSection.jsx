@@ -5,12 +5,12 @@ export const ContactSection = () => {
     return (
         <section id="contact" className="py-20 px-4 bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+                <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">
                     Contacta <span className="text-primary"> Conmigo </span>
                 </h2>
 
-                <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                    Siempre estoy abierta a nuevos proyectos, ideas creativas y oportunidades para crear algo extraordinario. Si crees que nuestras trayectorias pueden cruzarse, hablemos.
+                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-xl">
+                    Siempre estoy abierta a nuevos proyectos y oportunidades para crear algo extraordinario. Si crees que nuestras trayectorias pueden cruzarse, hablemos.
                 </p>
 
                     <div className="space-y-2">
@@ -23,19 +23,19 @@ export const ContactSection = () => {
                                 </div>
                                 <a
                                     href="mailto:abr04work@gmail.com"
-                                    className="text-muted-foreground hover:text-primary transition-colors text-lg"
+                                    className="text-muted-foreground hover:text-primary transition-colors text-xl"
                                 >
                                     abr04work@gmail.com
                                 </a>
                             </div>
 
                             {/* Location Card */}
-                            <div className="bg-card w-80 p-4 rounded-lg shadow-xs flex items-center space-x-4">
+                            <div className="bg-card w-60 p-4 rounded-lg shadow-xs flex items-center space-x-4">
                                 <div className="p-3 rounded-full bg-primary/10">
                                     <MapPin className="h-6 w-6 text-primary" />
                                 </div>
-                                <span className="text-muted-foreground text-lg">
-                                    Pontevedra, Galicia, España
+                                <span className="text-muted-foreground text-xl">
+                                    Galicia, España
                                 </span>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ export const ContactSection = () => {
                         
                         {/* Connect */}
                         <div className="pt-8">
-                            <h4 className="font-medium mb-4 text-lg"> Conectemos</h4>
+                            <h4 className="font-medium mb-4 text-lg text-primary"> Conectemos</h4>
                             <div className="flex space-x-4 justify-center"> 
                                 <a href="https://www.linkedin.com/in/ania-blanco" target="_blank">
                                     <Linkedin size={30}/>
