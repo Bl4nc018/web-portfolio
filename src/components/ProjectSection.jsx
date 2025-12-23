@@ -8,7 +8,7 @@ const projects = [
         description: "SaborExpress es una app móvil para descubrir, guardar y compartir recetas sencillas, desarrollada como proyecto final del grado superior en DAM.",
         image:"/projects/project1.png",
         tags: ["Python", "Java", "App móvil", "Full-Stack"],
-        githubUrl: "#https://github.com/Bl4nc018/saborexpress",
+        githubUrl: "https://github.com/Bl4nc018/saborexpress",
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ const projects = [
         description: "Implementación en Python del juego piedra, papel, tijera incorporando un agente inteligente basado en modelos para analizar el historial de jugadas y tratar de vencer al usuario.",
         image:"/projects/project2.png",
         tags: ["Python", "Agentes IA", "Lógica"],
-        githubUrl: "#https://github.com/Bl4nc018/proyecto-RPS",
+        githubUrl: "https://github.com/Bl4nc018/proyecto-RPS",
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const projects = [
         description: "Proyecto desarrollado con Django que permite consultar Pokémon según su ubicación geográfica y comprobar cuáles se encuentran cerca de unas coordenadas específicas.",
         image:"/projects/project3.png",
         tags: ["Python", "Django", "API REST", "Backend"],
-        githubUrl: "#https://github.com/Bl4nc018/pokemon-api",
+        githubUrl: "https://github.com/Bl4nc018/pokemon-api",
     },
 ]
 
