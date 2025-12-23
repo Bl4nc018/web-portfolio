@@ -5,10 +5,10 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
     { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
+    { name: "Sobre mí", href: "#about" },
     { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Proyectos", href: "#projects" },
+    { name: "Contacto", href: "#contact" },
 ];
 
 export const Navbar = () => {
@@ -16,13 +16,9 @@ export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
-        }
-
+        const handleScroll = () => {setIsScrolled(window.scrollY > 10);}
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-
     }, []);
 
     return ( 
@@ -44,7 +40,7 @@ export const Navbar = () => {
                 </a>
 
                 {/* Desktop Nav. */}
-                <div className="hidden md:flex space-x-8">
+                <div className="hidden md:flex space-x-10 py-2">
                     {navItems.map((item, key) => (
                         <a 
                             key={key} 
