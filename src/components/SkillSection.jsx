@@ -87,7 +87,7 @@ export const SkillSection = () => {
                 </h2>
 
                 {/* Category filter */}
-                <div className="flex flex-wrap justify-center mb-12 gap-4 text-lg">
+                <div className="flex flex-wrap justify-center mb-12 gap-4 text-lg md:text-xl">
                 {categories.map((category) => (
                     <button
                         key={category}

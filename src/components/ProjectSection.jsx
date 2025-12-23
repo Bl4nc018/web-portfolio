@@ -15,16 +15,16 @@ const projects = [
         title: "Proyecto RPS",
         description: "Implementación en Python del juego piedra, papel, tijera incorporando un agente inteligente basado en modelos para analizar el historial de jugadas y tratar de vencer al usuario.",
         image:"/projects/project2.png",
-        tags: ["Python", "Agente IA", "Lógica"],
+        tags: ["Python", "Agentes IA", "Lógica"],
         githubUrl: "#https://github.com/Bl4nc018/proyecto-RPS",
     },
     {
         id: 3,
-        title: "X",
-        description: "---",
+        title: "PokeAPI",
+        description: "Proyecto desarrollado con Django que permite consultar Pokémon según su ubicación geográfica y comprobar cuáles se encuentran cerca de unas coordenadas específicas.",
         image:"/projects/project3.png",
-        tags: ["Python", "---", "---"],
-        githubUrl: "#",
+        tags: ["Python", "Django", "API REST", "Backend"],
+        githubUrl: "#https://github.com/Bl4nc018/pokemon-api",
     },
 ]
 
@@ -39,9 +39,9 @@ export const ProjectSection = () => {
                 Aquí están algunos de los proyectos que he desarrollado. Haz clic en el icono para acceder al código y conocer más sobre cada uno.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
                 {projects.map((project, key) => (
-                    <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+                    <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full">
                         <div className="h-50 overflow-hidden">
                             <img 
                                 src={project.image} 
@@ -50,18 +50,18 @@ export const ProjectSection = () => {
                             />
                         </div>
 
-                        <div className="p-6">
+                        <div className="p-6 flex flex-col flex-1">
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {project.tags.map((tag) => (
-                                    <span className="px-2 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground">
+                                    <span className="px-2 py-1.25 text-sm font-semibold rounded-full bg-primary text-primary-foreground">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
 
-                            <h3 className="text-xl md:text-2xl font-semibold mb-2"> {project.title} </h3>
-                            <p className="text-base md:text-base text-muted-foreground mb-5"> {project.description} </p>
-                            <div className="flex justify-between items-center">
+                            <h3 className="text-2xl md:text-3xl text-primary font-semibold mb-4"> {project.title} </h3>
+                            <p className="text-lg text-muted-foreground"> {project.description} </p>
+                            <div className="flex justify-between items-center mt-auto pt-2">
                                 <div className="flex space-x-3">
                                     <a 
                                         href={project.githubUrl}
