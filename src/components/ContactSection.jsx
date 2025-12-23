@@ -5,7 +5,7 @@ export const ContactSection = () => {
     return (
         <section id="contact" className="py-40 px-4 bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
-                <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
                     Contacta <span className="text-primary"> Conmigo </span>
                 </h2>
 
