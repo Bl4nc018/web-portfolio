@@ -5,18 +5,18 @@ const projects = [
     {
         id: 1,
         title: "SaborExpress",
-        description: "---",
+        description: "SaborExpress es una app móvil para descubrir, guardar y compartir recetas sencillas, desarrollada como proyecto final del grado superior en DAM.",
         image:"/projects/project1.png",
-        tags: ["Python", "---", "---"],
-        githubUrl: "#",
+        tags: ["Python", "Java", "App móvil", "Full-Stack"],
+        githubUrl: "#https://github.com/Bl4nc018/saborexpress",
     },
     {
         id: 2,
-        title: "ProyectoRPS",
-        description: "---",
+        title: "Proyecto RPS",
+        description: "Implementación en Python del juego piedra, papel, tijera incorporando un agente inteligente basado en modelos para analizar el historial de jugadas y tratar de vencer al usuario.",
         image:"/projects/project2.png",
-        tags: ["Python", "---", "---"],
-        githubUrl: "#",
+        tags: ["Python", "Agente IA", "Lógica"],
+        githubUrl: "#https://github.com/Bl4nc018/proyecto-RPS",
     },
     {
         id: 3,
@@ -30,22 +30,19 @@ const projects = [
 
 export const ProjectSection = () => {
     return <section id="projects" className="py-40 px-4 relative">
-        <div className="container mx-auto max-w-5xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center"> 
-                Featured <span className="text-primary"> Projects </span>
+        <div className="container mx-auto max-w-6xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center"> 
+                Proyectos <span className="text-primary"> Destacados </span>
             </h2>
 
-            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                Here are some of the projects I've worked on recently. Click on the project titles to explore the code repositories and learn more about each project.
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-lg md:text-xl">
+                Aquí están algunos de los proyectos que he desarrollado. Haz clic en el icono para acceder al código y conocer más sobre cada uno.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 {projects.map((project, key) => (
-                    <div
-                        key={key}
-                        className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
-                    >
-                        <div className="h-48 overflow-hidden">
+                    <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
+                        <div className="h-50 overflow-hidden">
                             <img 
                                 src={project.image} 
                                 alt={project.title} 
@@ -56,14 +53,14 @@ export const ProjectSection = () => {
                         <div className="p-6">
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {project.tags.map((tag) => (
-                                    <span className="px-2 py-1 text-xs font-medium rounded-full bg-primary text-secondary-foreground">
+                                    <span className="px-2 py-1.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
 
-                            <h3 className="text-xl font-semibold mb-1"> {project.title} </h3>
-                            <p className="text-muted-foreground text-sm mb-4"> {project.description} </p>
+                            <h3 className="text-xl md:text-2xl font-semibold mb-2"> {project.title} </h3>
+                            <p className="text-base md:text-base text-muted-foreground mb-5"> {project.description} </p>
                             <div className="flex justify-between items-center">
                                 <div className="flex space-x-3">
                                     <a 
@@ -82,11 +79,11 @@ export const ProjectSection = () => {
 
             <div className="text-center mt-12">
                 <a 
-                    className="cosmic-button w-fit flex items-center mx-auto gap-2" 
+                    className="cosmic-button w-fit flex items-center mx-auto gap-2 font-semibold text-lg" 
                     target="_blank"
                     href="https://github.com/Bl4nc018"
                 >
-                    Check My Github <ArrowRight size={16}/>
+                    Descubre Mi Github <ArrowRight size={20}/>
                 </a>
             </div>
         </div>

@@ -9,7 +9,7 @@ export const ContactSection = () => {
                     Contacta <span className="text-primary"> Conmigo </span>
                 </h2>
 
-                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-xl">
+                <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg md:text-xl">
                     Siempre estoy abierta a nuevos proyectos y oportunidades para crear algo extraordinario. Si crees que nuestras trayectorias pueden cruzarse, hablemos.
                 </p>
 
@@ -43,7 +43,7 @@ export const ContactSection = () => {
                         
                         {/* Connect */}
                         <div className="pt-8">
-                            <h4 className="font-medium mb-4 text-lg text-primary font-semibold"> Conectemos</h4>
+                            <h4 className="font-semibold mb-4 text-xl text-primary"> Conectemos</h4>
                             <div className="flex space-x-4 justify-center"> 
                                 <a href="https://www.linkedin.com/in/ania-blanco" target="_blank">
                                     <Linkedin size={30}/>
