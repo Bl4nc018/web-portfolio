@@ -1,19 +1,27 @@
+// ThemeToggle
+// Propósito: Alternar entre modo claro y oscuro.
+// Persistencia: Guarda la preferencia del usuario en localStorage.
+// UX: En móviles se oculta al hacer scroll para reducir distracciones visuales.
+
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export const ThemeToggle = () => {
+    // Estado inicial del tema basado en la preferencia guardada
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const storedTheme = localStorage.getItem("theme");
         return storedTheme === "dark";
     });
 
+    // Controla la visibilidad del botón en dispositivos móviles
     const [visible, setVisible] = useState(() => {
         return window.matchMedia("(max-width: 640px)").matches
             ? window.scrollY < 30
             : true;
     });
 
+    // Alterna el tema y actualiza localStorage y la clase del documento
     const toggleTheme = () => {
         if (isDarkMode) {
             document.documentElement.classList.remove("dark");
@@ -27,23 +35,19 @@ export const ThemeToggle = () => {
     };
 
     useEffect(() => {
-        if (isDarkMode) {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
+        // Sincroniza el estado del tema con la clase `dark` en <html>
+        document.documentElement.classList.toggle("dark", isDarkMode);
     }, [isDarkMode]);
 
     useEffect(() => {
+        // Maneja la visibilidad del botón según el scroll en móvil
         const isMobile = window.matchMedia("(max-width: 640px)").matches;
-
         if (!isMobile) {
             setVisible(true);
             return;
         }
 
         const handleScroll = () => {setVisible(window.scrollY < 30);};
-
         handleScroll();
 
         window.addEventListener("scroll", handleScroll);
@@ -51,6 +55,7 @@ export const ThemeToggle = () => {
     }, []);
 
     return (
+        // Botón fijo para alternar el tema visual
         <button
             onClick={toggleTheme}
             className={cn(

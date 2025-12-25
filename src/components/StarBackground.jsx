@@ -1,12 +1,15 @@
+// StarBackground
+// Propósito: Generar un fondo decorativo animado con estrellas y meteoros.
+// Nota: Capa visual no interactiva, pensada principalmente para el modo oscuro.
+
 import { useEffect, useState } from "react";
 
-// id, size, x, y, opacity, animationDuration - Star properties
-// id, size, x, y, delay, duration - Meteor properties
-
 export const StarBackground = () => {
-        const [stars, setStars] = useState([]);
+        // Estado que almacena las estrellas y los meteoros generados
+        const [stars, setStars] = useState([]); 
         const [meteors, setMeteors] = useState([]);
 
+        // Genera estrellas en función del tamaño de la pantalla
         const generateStars = () => {
             const numberOfStars = Math.floor((window.innerWidth * window.innerHeight) / 9000);
             const newStars = [];
@@ -24,6 +27,7 @@ export const StarBackground = () => {
             setStars(newStars);
         };
 
+        // Genera un número reducido de meteoros con animación
         const generateMeteors = () => {
             const numberOfMeteors = 4;
             const newMeteors = [];
@@ -42,6 +46,8 @@ export const StarBackground = () => {
         };
 
         useEffect(() => {
+
+            // Inicializa el fondo y recalcula estrellas al redimensionar la ventana
             generateStars();
             generateMeteors();
             
@@ -54,6 +60,7 @@ export const StarBackground = () => {
         }, []);
     
     return (
+        // Capa de fondo fija que ignora eventos del usuario
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
             {stars.map((star) => (
                 <div 

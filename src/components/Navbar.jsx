@@ -1,8 +1,12 @@
+// Navbar
+// Barra de navegación fija con comportamiento dinámico al hacer scroll y menú responsive para dispositivos móviles.
+
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
+// Elementos de navegación usados para el scroll interno
 const navItems = [
     { name: "Home", href: "#hero" },
     { name: "Acerca de mí", href: "#about" },
@@ -12,10 +16,11 @@ const navItems = [
 ];
 
 export const Navbar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false); // Indica si la página ha sido desplazada para aplicar estilos compactos
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // Controla la visibilidad del menú móvil
 
     useEffect(() => {
+        // Escucha el scroll para actualizar el estado visual del navbar
         const handleScroll = () => {setIsScrolled(window.scrollY > 10);}
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -30,16 +35,15 @@ export const Navbar = () => {
         >
 
             <div className="container flex items-center justify-between">
-                <a 
-                    className="text-xl font-bold text-primary flex items-center"
-                    href="#hero"
-                >
+
+                {/* Marca / enlace principal a home */}
+                <a className="text-xl font-bold text-primary flex items-center" href="#hero">
                     <span className="relative z-10">
                         <span className="text-glow text-foreground"> Ania </span> Portfolio
                     </span>
                 </a>
 
-                {/* Desktop Nav. */}
+                {/* Navegación de escritorio (oculta en móviles) */}
                 <div className="hidden md:flex space-x-10 py-2">
                     {navItems.map((item, key) => (
                         <a 
@@ -52,8 +56,7 @@ export const Navbar = () => {
                     ))}
                 </div>
 
-                {/* Mobile Nav. */}
-
+                {/* Botón para abrir/cerrar el menú móvil */}
                 <button 
                     onClick={() => setIsMenuOpen((prev) => !prev)} 
                     className="md:hidden p-2 text-foreground z-50"
@@ -62,7 +65,7 @@ export const Navbar = () => {
                     {isMenuOpen ? <X size={24} /> : <Menu size={24}/>} 
                 </button>
 
-
+                {/* Menú móvil a pantalla completa */}
                 <div 
                     className={cn(
                         "fixed inset-0 bg-background/95 background-blur-md z-40 flex flex-col items-center justify-center",

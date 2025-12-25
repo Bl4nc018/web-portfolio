@@ -1,14 +1,21 @@
+// AboutSection
+// Presenta una introducción personal y resume las áreas principales de experiencia.
+
 import { Code, BookOpen, User } from "lucide-react";
 
 export const AboutSection = () => {
     return (
+        // Sección con ancla usada para la navegación interna desde el navbar
         <section id="about" className="py-50 md:py-50 px-4 relative">
             <div className="container mx-auto max-2-5xl">
 
+                {/* Título principal de la sección */}
                 <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center"> Acerca de <span className="text-primary"> mí </span> </h2>
 
+                {/* Layout en dos columnas: descripción personal y tarjetas de valor */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     
+                    {/* Texto descriptivo / biografía profesional */}
                     <div className="space-y-6">
                         <h3 className="text-2xl font-semibold text-justify text-glow"> Desarrolladora Full-Stack en constante aprendizaje.</h3>
                         <p className="text-muted-foreground text-lg md:text-xl text-justify">
@@ -18,6 +25,7 @@ export const AboutSection = () => {
                             Me motiva aprender nuevas tecnologías de forma continua y tener una visión global del desarrollo. Trabajo con lenguajes como Python, Java y SQL, así como HTML y CSS, creando soluciones completas a la par que escalables. Disfruto resolver problemas complejos y aprender constantemente nuevas tecnologías.
                         </p>
 
+                        {/* Botones contacto y descarga de CV */}
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center text-lg">
                             <a href="#contact" className="cosmic-button font-semibold"> Ponte en contacto </a>
                             <a href="/AniaBlancoRodriguezResume.pdf" download="AniaBlancoResume.pdf" className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-lg">
@@ -26,6 +34,7 @@ export const AboutSection = () => {
                         </div>
                     </div>
 
+                    {/* Tarjetas destacando áreas clave */}
                     <div className="grid grid-cols-1 gap-6">
                         <div className="gradient-border p-6 card-hover">
                             <div className="flex items-start gap-4"> 

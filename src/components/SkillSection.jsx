@@ -1,10 +1,12 @@
+// SkillSection
+// Mostrar habilidades técnicas y permitir filtrarlas por categoría.
+
 import { useState } from "react";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, 
-    FaLinux, FaGitAlt, FaGithub, FaDocker, FaDatabase, } from "react-icons/fa";
-import { SiTailwindcss, SiDjango, SiSpringboot, SiMysql, SiMariadb, SiPostgresql, 
-    SiSqlite, SiMongodb, SiApachespark, SiApachehadoop, SiPostman, SiJupyter } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, FaJava, FaLinux, FaGitAlt, FaGithub, FaDocker, FaDatabase, } from "react-icons/fa";
+import { SiTailwindcss, SiDjango, SiSpringboot, SiMysql, SiMariadb, SiPostgresql, SiSqlite, SiMongodb, SiApachespark, SiApachehadoop, SiPostman, SiJupyter } from "react-icons/si";
 import { cn } from "@/lib/utils";
 
+// Lista base de habilidades y su categoría asociada
 const skills = [
     // Frontend
     { name: "CSS", category: "frontend" },
@@ -41,6 +43,7 @@ const skills = [
     { name: "Postman", category: "herramientas" },
 ];
 
+// Mapeo de iconos y colores por habilidad
 const skillIcons = {
     HTML: { icon: <FaHtml5 />, color: "#E34F26" },
     CSS: { icon: <FaCss3Alt />, color: "#1572B6" },
@@ -72,11 +75,15 @@ const skillIcons = {
     "Jupyter Notebooks": { icon: <SiJupyter />, color: "#F37626" },
 };
 
+// Categorías disponibles para el filtrado
 const categories = ["all", "frontend", "backend", "databases", "Big Data", "herramientas"];
 
 export const SkillSection = () => {
+
+    // Categoría activa seleccionada por el usuario
     const [activeCategory, setActiveCategory] = useState("all");
 
+    // Lista de habilidades filtradas según la categoría activa
     const filteredSkills = skills.filter((skill) => activeCategory === "all" || skill.category === activeCategory);
 
     return (
@@ -86,7 +93,7 @@ export const SkillSection = () => {
                     Mis <span className="text-primary">Habilidades</span>
                 </h2>
 
-                {/* Category filter */}
+                {/* Botones de filtrado por categoría */}
                 <div className="flex flex-wrap justify-center mb-12 gap-4 text-lg md:text-xl">
                 {categories.map((category) => (
                     <button
@@ -102,7 +109,7 @@ export const SkillSection = () => {
                 ))}
                 </div>
 
-                {/* Skills grid */}
+                {/* Grid de habilidades */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredSkills.map((skill, key) => (
                         <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
@@ -113,7 +120,7 @@ export const SkillSection = () => {
                                     style={{ color: skillIcons[skill.name]?.color,}}
                                     aria-hidden="true"
                                 >
-                                    {/* Check if skill has icon or not */}
+                                    {/* Icono de la habilidad (fallback si no existe) */}
                                     {skillIcons[skill.name]?.icon ?? (<FaDatabase />)}  
                                 </span>
                             </div>
