@@ -12,6 +12,13 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
    <img src="https://img.shields.io/badge/Maintained-yes-brightgreen">
 </p>
 
+---
+
+## **Índice**
+1. [Descripción del problema](#1-descripción-del-problema)
+2. [Solución implementada](#2-solución-implementada)
+3. [Estructura del proyecto](#3-estructura-del-proyecto)
+4. [Instalación y ejecución](#4-instalación-y-ejecución)
 
 ---
 
@@ -39,13 +46,14 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
 
 ## 📁 Estructura del proyecto
 
-web-portfolio/
+```
+📁 web-portfolio/
 ├── node_modules/
 ├── public/
 │   ├── projects/
 │   ├── cv.pdf
 │   └── vite.svg
-├── src/
+├── 📁 src/
 │   ├── assets/
 │   │   └── react.svg
 │   ├── components/
@@ -70,13 +78,13 @@ web-portfolio/
 ├── package.json
 ├── README.md
 └── vite.config.js
-
+```
 La estructura del proyecto sigue una organización clara y modular en la que se separan los recursos estáticos, los componentes reutilizables y la página principal de la aplicación.  
 En el directorio `src` se concentra la lógica principal y la interfaz de usuario.
 
 ---
 
-## Instalación y ejecución
+## Instalación y ejecución:
 
 ### Requisitos
 
@@ -86,24 +94,33 @@ En el directorio `src` se concentra la lógica principal y la interfaz de usuari
 
 ### Pasos
 
-1. Clonar el repositorio
-   `git clone https://github.com/Bl4nc018/web-portfolio.git`
+### **1. Clonar el repositorio**
+```sh
+    git clone git@github.com:Bl4nc018/web-portfolio.git
+    cd web-portfolio
+```
 
-2. Acceder al proyecto
-   `cd web-portfolio`
+### **2. Instalar las dependencias (automáticamente instalará los paquetes de package.json o package-lock.json)**
 
-3. Instalar dependencias
-   `npm install`
+```sh
+    npm install
+```
 
-4. Ejecutar en desarrollo
-   `npm run dev`
+### **3. Ejecutar en modo desarrollo**
 
-La aplicación estará disponible en `http://localhost:5173`
+```sh
+    npm run dev
+```
 
+Y ahora se podrá acceder al localhost para la preview de la web: `http://localhost:5173`
 
 ---
 
-## Autora
+### Desarrollado por:
 
-**Ania**
-GitHub: [https://github.com/Bl4nc018](https://github.com/Bl4nc018)
+<p align="left">
+   <a href="https://github.com/Bl4nc018">
+      <img src="https://avatars.githubusercontent.com/u/92156488?s=400&u=1302f75511bad4df69803bf7b66443a1a8364b60&v=4" width=115><br>
+      <sub>Ania</sub>
+   </a>
+</p>
