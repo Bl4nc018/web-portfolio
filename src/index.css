@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
+/* Archivo de estilos Tailwind + tema: variables CSS (HSL) y animaciones personalizadas */
 @theme {
+
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -10,6 +12,7 @@
 
   --color-card: hsl(var(--card));
 
+  /* Animaciones (n strengthens: duración + easing + repetición) */
   --animate-float: float 6s ease-in-out infinite;
   --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
   --animate-fade-in: fade-in 0.7s ease-out forwards;
@@ -19,7 +22,7 @@
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   --animate-meteor: meteor 5s linear infinite;
 
-  /* Keyframes state how the animation should behave */
+  /* Keyframes; definen el movimiento de las animaciones anteriores */
   @keyframes float{ 
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -36,6 +39,7 @@
   }
 
   @keyframes meteor {
+    /* Meteorito que recorre en diagonal la pantalla de esquina a esquina */
     0% {
       transform: rotate(215deg) translateX(0);
       opacity: 1;
@@ -52,6 +56,7 @@
 
 
 @layer base {
+
   :root{
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
@@ -64,6 +69,7 @@
     --border: 214 32% 91%;
   }
 
+  /* Colores para el modo oscuro */
   .dark{
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
@@ -78,14 +84,14 @@
 
   /* LIGHT MODE: Galaxy grid */
   html:not(.dark) {
-    /* Galaxy grid */
     #root > div::before {
       content: "";
       position: fixed;
       inset: 0;
-      pointer-events: none;
+      pointer-events: none; /* evita bloquear clicks/scroll */
       z-index: 0;
 
+      /* Lineas del grid (rejillas) */
       background:
         linear-gradient(to right, rgba(30, 64, 175, 0.05) 2px, transparent 2px),
         linear-gradient(to bottom, rgba(30, 64, 175, 0.04) 2px, transparent 2px);
@@ -94,15 +100,14 @@
       background-position: 12px 18px;
     }
 
-    /* Ocultar fondo animado en tema claro */
+    /* Ocultar fondo animado (estrellas/meteoros) en tema claro */
     .star,
     .meteor {
       display: none;
     }
   }
 
-
-  *{
+  *padding{
     @apply border-border;
   }
 
@@ -110,36 +115,25 @@
     @apply scroll-smooth;
   }
 
+  /* Body: fondo + color de texto según variables, con transición al cambiar tema */
   body{
     @apply bg-background text-foreground transition-colors duration-300;
+    /* Activación de ligaduras y alternates tipográficos (si la fuente lo soporta) */
     font-feature-settings: "rlig" 1, "calt" 1; 
   }
 }
 
 @utility container{
+  /* Contenedor centrado con padding horizontal consistente */
   margin-inline: auto;
   padding-inline: 2rem;
 
-  /* Responsive max-widths for each screen size */
-  @media (width >= 640px) {
-    max-width: 640px;
-  }
-
-  @media (width >= 768px) {
-    max-width: 768px;
-  }
-
-  @media (width >= 1024px) {
-    max-width: 1024px;
-  }
-
-  @media (width >= 1280px) {
-    max-width: 1280px;
-  }
-
-  @media (width >= 1400px) {
-    max-width: 1400px;
-  }
+  /* Responsive max-widths por breakpoint para mejor del ancho de pantalla */
+  @media (width >= 640px) {max-width: 640px;}
+  @media (width >= 768px) {max-width: 768px;}
+  @media (width >= 1024px) {max-width: 1024px;}
+  @media (width >= 1280px) {max-width: 1280px;}
+  @media (width >= 1400px) {max-width: 1400px;}
 }
 
 @utility text-glow{
@@ -152,6 +146,7 @@
 }
 
 @utility gradient-border{
+  /* “Borde” por gradiente: base sólida + borde transparente para permitir efectos */
   @apply relative rounded-md;
   background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
   background-clip: padding-box;
@@ -159,8 +154,8 @@
 }
 
 @utility cosmic-button{
+  /* Botón redondeado con hover luminoso y feedback de click */
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-[0_0_10px_hsl(var(--primary)_/_0.5)] hover:scale-105 active:scale-95;
-
 }
 
 @utility star{
@@ -169,6 +164,7 @@
 }
 
 @utility meteor{
+  /* Trazo del meteorito con degradado hacia transparente + brillo */
   @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
@@ -179,6 +175,7 @@
   padding: 0;
   text-align: center;
   
+  /* Evita que el fondo (z-index:0) quede detrás */
   position: relative;
   z-index: 1;
 }
