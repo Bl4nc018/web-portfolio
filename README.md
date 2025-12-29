@@ -14,13 +14,15 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
 
 ---
 
-## **Índice**
+## Índice
 1. [Características del proyecto](#1-caracteristicas)
 2. [Detalles técnicos](#2-detalles-tecnicos)
 3. [Estructura del proyecto](#3-estructura-del-proyecto)
 4. [Instalación y ejecución](#4-instalación-y-ejecución)
 
 ---
+
+## <a id="1-caracteristicas"></a>Características del proyecto
 
 ## Características:
 
@@ -30,6 +32,9 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
 * Código en el que se puede implementar nuevas funcionalidades de forma sencilla.
 
 ---
+
+## <a id="2-detalles-tecnicos"></a>Detalles técnicos
+
 
 ## 🔧 Detalles técnicos
 
@@ -43,6 +48,9 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
 - Animaciones implementadas con CSS (`@keyframes`).
 
 ---
+
+## <a id="3-estructura-del-proyecto"></a>Estructura del proyecto
+
 
 ## 📁 Estructura del proyecto
 
@@ -83,6 +91,9 @@ La estructura del proyecto sigue una organización clara y modular en la que se 
 En el directorio `src` se concentra la lógica principal y la interfaz de usuario.
 
 ---
+
+## <a id="4-instalacion-y-ejecucion"></a>Instalación y ejecución
+
 
 ## Instalación y ejecución:
 
