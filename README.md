@@ -15,8 +15,8 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
 ---
 
 ## **Índice**
-1. [Descripción del problema](#1-descripción-del-problema)
-2. [Solución implementada](#2-solución-implementada)
+1. [Características del proyecto](#1-caracteristicas)
+2. [Detalles técnicos](#2-detalles-tecnicos)
 3. [Estructura del proyecto](#3-estructura-del-proyecto)
 4. [Instalación y ejecución](#4-instalación-y-ejecución)
 
