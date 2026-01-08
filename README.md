@@ -12,17 +12,12 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
    <img src="https://img.shields.io/badge/Maintained-yes-brightgreen">
 </p>
 
----
 
 ## Índice
 1. [Características del proyecto](#1-caracteristicas)
 2. [Detalles técnicos](#2-detalles-tecnicos)
 3. [Estructura del proyecto](#3-estructura-del-proyecto)
 4. [Instalación y ejecución](#4-instalación-y-ejecución)
-
----
-
-## <a id="1-caracteristicas"></a>Características del proyecto
 
 ## Características:
 
@@ -31,12 +26,7 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
 * Animaciones personalizadas sin dependencias externas.
 * Código en el que se puede implementar nuevas funcionalidades de forma sencilla.
 
----
-
-## <a id="2-detalles-tecnicos"></a>Detalles técnicos
-
-
-## 🔧 Detalles técnicos
+## Detalles técnicos
 
 **Lenguaje y tecnologías:** JavaScript, HTML y CSS.
 
@@ -46,10 +36,6 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
 - Sistema de diseño basado en tokens.
 - Gestión de temas claro / oscuro mediante variables CSS.
 - Animaciones implementadas con CSS (`@keyframes`).
-
----
-
-## <a id="3-estructura-del-proyecto"></a>Estructura del proyecto
 
 
 ## 📁 Estructura del proyecto
@@ -90,20 +76,15 @@ Este proyecto se trata de una **Single Page Application (SPA)** desarrollada con
 La estructura del proyecto sigue una organización clara y modular en la que se separan los recursos estáticos, los componentes reutilizables y la página principal de la aplicación.  
 En el directorio `src` se concentra la lógica principal y la interfaz de usuario.
 
----
-
-## <a id="4-instalacion-y-ejecucion"></a>Instalación y ejecución
-
-
 ## Instalación y ejecución:
 
-### Requisitos
+### Requisitos:
 
 * Node.js 18+
 * npm o yarn
 * Git
 
-### Pasos
+### Pasos:
 
 ### **1. Clonar el repositorio**
 ```sh
